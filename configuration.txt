@@ -1,0 +1,48 @@
+-- Lua-like configuration file
+-- Edit fields below depending on the needed values' types
+-- Use '--' as comments
+-- Use "" for strings
+--
+
+cube.light_node = "default:meselamp"
+-- ^ This node will be placed at the center of every cell
+-- Requires an ItemString
+
+cube.wall_node = "default:stone"
+-- ^ This node will be used to make walls between cells
+-- Requires an ItemString
+
+cube.segment_node = "default:stone"
+-- ^ This node will be used to make segments delimitating cells
+-- Requires an ItemString
+
+cube.container_node = "default:obsidian"
+-- ^ This node will be used to make the global container of the cube
+-- Requires an ItemString
+
+cube.cell_length = 6
+-- ^ Length + 1 in cells (the +1 is the wall itself)
+-- Providing an odd number will result in no-lights
+-- Requires an integer
+-- Note : This will be change for a `cell_half_length` later
+
+-- cube.length = 100
+-- ^ Length of the global cube, so, number of cells per rows and columns
+-- Requires and integer
+-- Note : If not provided, the cube is infinite
+
+cube.no_x_wall = true
+-- ^ Avoid building walls on x axis
+-- Requires a boolean
+
+cube.no_y_wall = true
+-- ^ Avoid building walls on y axis
+-- Requires a boolean
+
+cube.no_z_wall = true
+-- ^ Avoid building walls on z axis
+-- Requires a boolean
+
+cube.no_lights = true
+-- ^ Avoid placing lights
+-- Requires a boolean
