@@ -4,6 +4,11 @@
 -- Use "" for strings
 --
 
+cube.disable_mapgen = true
+-- ^ If set to 'true', cube will disable the engine's map generation. Set it to 'false' and cubes will be generated over the standard generated map
+-- Requires a boolean
+
+
 cube.light_node = "default:meselamp"
 -- ^ This node will be placed at the center of every cell
 -- Requires an ItemString

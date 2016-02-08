@@ -3,9 +3,11 @@ cube.mod_name = "cube" -- Change this to change mod's name
 dofile(minetest.get_modpath(cube.mod_name).."/configuration.txt")
 
 
-minetest.register_on_mapgen_init(function(mgparams)
-		minetest.set_mapgen_params({mgname="singlenode"})
-end)
+if cube.disable_mapgen then
+    minetest.register_on_mapgen_init(function()
+	    minetest.set_mapgen_params({mgname="singlenode"})
+    end)
+end
 
 minetest.register_on_generated(function(minp, maxp, seed)
 	-- Set up voxel manip
@@ -87,4 +89,3 @@ minetest.register_on_generated(function(minp, maxp, seed)
 	vm:set_data(data)
 	vm:write_to_map(data)
 end)
-
